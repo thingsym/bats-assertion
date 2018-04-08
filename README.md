@@ -2,6 +2,8 @@
 
 Bats Assertion is a helper script for [Bats](https://github.com/bats-core/bats-core/).
 
+[![Build Status](https://travis-ci.org/thingsym/bats-assertion.svg?branch=master)](https://travis-ci.org/thingsym/bats-assertion)
+
 ## Assertion Example
 
 ```
