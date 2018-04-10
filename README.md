@@ -4,7 +4,7 @@ Bats Assertion is a helper script for [Bats](https://github.com/bats-core/bats-c
 
 [![Build Status](https://travis-ci.org/thingsym/bats-assertion.svg?branch=master)](https://travis-ci.org/thingsym/bats-assertion)
 
-## Assertion Example
+## Example
 
 ```
 #!/usr/bin/env bats
@@ -130,8 +130,6 @@ Reports an error if `$status` is not 0.
 ```
 assert_success
 ```
-
-#### Example
 
 ### assert_failure
 
