@@ -2,7 +2,7 @@
 
 load ../bats-assertion
 
-@test "assert_lines_equal <expected> <line> - returns 0 exit code" {
+@test "assert_lines_equal <expected> <line> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_equal "abc" 0
 
@@ -25,7 +25,7 @@ load ../bats-assertion
 
 }
 
-@test "assert_lines_equal <expected> <line> - returns 1 exit code" {
+@test "assert_lines_equal <expected> <line> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_equal "cba" 0
 
@@ -84,7 +84,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_equal <expected> <reserved word> - returns 0 exit code" {
+@test "assert_lines_equal <expected> <reserved word> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_equal "abc" "first"
 
@@ -97,7 +97,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_equal <expected> <reserved word> - returns 1 exit code" {
+@test "assert_lines_equal <expected> <reserved word> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_equal "cba" "first"
 
@@ -128,7 +128,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_equal <expected> <line> - returns 0 exit code" {
+@test "assert_fail_lines_equal <expected> <line> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_equal "cba" 0
 
@@ -151,7 +151,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_equal <expected> <line> - returns 1 exit code" {
+@test "assert_fail_lines_equal <expected> <line> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_equal "abc" 0
 
@@ -210,7 +210,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_equal <expected> <reserved word> - returns 0 exit code" {
+@test "assert_fail_lines_equal <expected> <reserved word> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_equal "cba" "first"
 
@@ -223,7 +223,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_equal <expected> <reserved word> - returns 1 exit code" {
+@test "assert_fail_lines_equal <expected> <reserved word> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_equal "abc" "first"
 
@@ -254,7 +254,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_equal <expected>, using \$lines as <actual> - returns 0 exit code" {
+@test "assert_lines_equal <expected>, using \$lines as <actual> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_equal "abc"
 
@@ -272,7 +272,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_equal <expected>, using \$lines as <actual> - returns 1 exit code" {
+@test "assert_lines_equal <expected>, using \$lines as <actual> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_equal "cba"
 
@@ -320,7 +320,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_equal <expected>, using \$lines as <actual> - returns 0 exit code" {
+@test "assert_fail_lines_equal <expected>, using \$lines as <actual> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_equal "cba"
 
@@ -338,7 +338,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_equal <expected>, using \$lines as <actual> - returns 1 exit code" {
+@test "assert_fail_lines_equal <expected>, using \$lines as <actual> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_equal "abc"
 

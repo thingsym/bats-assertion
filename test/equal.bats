@@ -2,7 +2,7 @@
 
 load ../bats-assertion
 
-@test "assert_equal <expected>, using \$output as <actual> - returns 0 exit code" {
+@test "assert_equal <expected>, using \$output as <actual> - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_equal "abc"
 
@@ -10,7 +10,7 @@ load ../bats-assertion
 
 }
 
-@test "assert_equal <expected>, using \$output as <actual> - returns 1 exit code" {
+@test "assert_equal <expected>, using \$output as <actual> - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_equal "cba"
 
@@ -26,7 +26,7 @@ EXPECTED
 
 }
 
-@test "assert_equal <expected> <actual> - returns 0 exit code" {
+@test "assert_equal <expected> <actual> - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_equal "abc" "abc"
 
@@ -34,7 +34,7 @@ EXPECTED
 
 }
 
-@test "assert_equal <expected> <actual> - returns 1 exit code" {
+@test "assert_equal <expected> <actual> - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_equal "cba" "abc"
 
@@ -50,7 +50,7 @@ EXPECTED
 
 }
 
-@test "assert_equal <expected>, using \$output as <actual> - multi-line format - returns 0 exit code" {
+@test "assert_equal <expected>, using \$output as <actual> - multi-line format - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
 
   local expected="$(cat <<EXPECTED
@@ -66,7 +66,7 @@ EXPECTED
 
 }
 
-@test "assert_equal <expected>, using \$output as <actual> - multi-line format - returns 1 exit code" {
+@test "assert_equal <expected>, using \$output as <actual> - multi-line format - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
 
   local expected="$(cat <<EXPECTED
@@ -94,7 +94,7 @@ EXPECTED
 
 }
 
-@test "assert_equal <expected> <actual> - multi-line format - returns 0 exit code" {
+@test "assert_equal <expected> <actual> - multi-line format - return 0 exit code" {
   local actual="$(cat <<ACTUAL
 abc
 def
@@ -117,7 +117,7 @@ EXPECTED
 
 }
 
-@test "assert_equal <expected> <actual> - multi-line format - returns 1 exit code" {
+@test "assert_equal <expected> <actual> - multi-line format - return 1 exit code" {
   local actual="$(cat <<ACTUAL
 abc
 def
@@ -152,7 +152,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_equal <expected>, using \$output as <actual> - returns 0 exit code" {
+@test "assert_fail_equal <expected>, using \$output as <actual> - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_equal "cba"
 
@@ -160,7 +160,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_equal <expected>, using \$output as <actual> - returns 1 exit code" {
+@test "assert_fail_equal <expected>, using \$output as <actual> - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_equal "abc"
 
@@ -176,7 +176,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_equal <expected> <actual> - returns 0 exit code" {
+@test "assert_fail_equal <expected> <actual> - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_equal "cba" "abc"
 
@@ -184,7 +184,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_equal <expected> <actual> - returns 1 exit code" {
+@test "assert_fail_equal <expected> <actual> - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_equal "abc" "abc"
 
@@ -200,7 +200,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_equal <expected>, using \$output as <actual> - multi-line format - returns 0 exit code" {
+@test "assert_fail_equal <expected>, using \$output as <actual> - multi-line format - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
 
   local expected="$(cat <<EXPECTED
@@ -216,7 +216,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_equal <expected>, using \$output as <actual> - multi-line format - returns 1 exit code" {
+@test "assert_fail_equal <expected>, using \$output as <actual> - multi-line format - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
 
   local expected="$(cat <<EXPECTED
@@ -244,7 +244,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_equal <expected> <actual> - multi-line format - returns 0 exit code" {
+@test "assert_fail_equal <expected> <actual> - multi-line format - return 0 exit code" {
   local actual="$(cat <<ACTUAL
 ihg
 fed
@@ -267,7 +267,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_equal <expected> <actual> - multi-line format - returns 1 exit code" {
+@test "assert_fail_equal <expected> <actual> - multi-line format - return 1 exit code" {
   local actual="$(cat <<ACTUAL
 abc
 def

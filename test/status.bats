@@ -2,7 +2,7 @@
 
 load ../bats-assertion
 
-@test "assert_status - returns 0 exit code" {
+@test "assert_status - return 0 exit code" {
   run bash -c 'exit 0'
   run assert_status 0
 
@@ -20,7 +20,7 @@ load ../bats-assertion
 
 }
 
-@test "assert_status - returns 1 exit code" {
+@test "assert_status - return 1 exit code" {
   run bash -c 'exit 1'
   run assert_status 0
 
@@ -49,7 +49,7 @@ EXPECTED
 
 }
 
-@test "assert_success - returns 0 exit code" {
+@test "assert_success - return 0 exit code" {
   run bash -c 'exit 0'
   run assert_success
 
@@ -57,7 +57,7 @@ EXPECTED
 
 }
 
-@test "assert_success - returns 1 exit code" {
+@test "assert_success - return 1 exit code" {
   run bash -c 'exit 1'
   run assert_success
 
@@ -73,7 +73,7 @@ EXPECTED
 
 }
 
-@test "assert_failure - returns 0 exit code" {
+@test "assert_failure - return 0 exit code" {
   run bash -c 'exit 1'
   run assert_failure
 
@@ -81,7 +81,7 @@ EXPECTED
 
 }
 
-@test "assert_failure - returns 1 exit code" {
+@test "assert_failure - return 1 exit code" {
   run bash -c 'exit 0'
   run assert_failure
 

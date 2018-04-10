@@ -2,7 +2,7 @@
 
 load ../bats-assertion
 
-@test "assert_match <expected>, using \$output as <actual> - returns 0 exit code" {
+@test "assert_match <expected>, using \$output as <actual> - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_match "ab"
 
@@ -10,7 +10,7 @@ load ../bats-assertion
 
 }
 
-@test "assert_match <expected>, using \$output as <actual> - returns 1 exit code" {
+@test "assert_match <expected>, using \$output as <actual> - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_match "cb"
 
@@ -26,7 +26,7 @@ EXPECTED
 
 }
 
-@test "assert_match <expected> <actual> - returns 0 exit code" {
+@test "assert_match <expected> <actual> - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_match "ab" "abc"
 
@@ -34,7 +34,7 @@ EXPECTED
 
 }
 
-@test "assert_match <expected> <actual> - returns 1 exit code" {
+@test "assert_match <expected> <actual> - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_match "cb" "abc"
 
@@ -50,7 +50,7 @@ EXPECTED
 
 }
 
-@test "assert_match <expected>, using \$output as <actual> - multi-line format - returns 0 exit code" {
+@test "assert_match <expected>, using \$output as <actual> - multi-line format - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
 
   run assert_match "$(cat <<EXPECTED
@@ -63,7 +63,7 @@ EXPECTED
 
 }
 
-@test "assert_match <expected>, using \$output as <actual> - multi-line format - returns 1 exit code" {
+@test "assert_match <expected>, using \$output as <actual> - multi-line format - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
 
   run assert_match "$(cat <<EXPECTED
@@ -87,7 +87,7 @@ EXPECTED
 
 }
 
-@test "assert_match <expected> <actual> - multi-line format - returns 0 exit code" {
+@test "assert_match <expected> <actual> - multi-line format - return 0 exit code" {
   local actual="$(cat <<ACTUAL
 abc
 def
@@ -109,7 +109,7 @@ EXPECTED
 
 }
 
-@test "assert_match <expected> <actual> - multi-line format - returns 1 exit code" {
+@test "assert_match <expected> <actual> - multi-line format - return 1 exit code" {
   local actual="$(cat <<ACTUAL
 abc
 def
@@ -142,7 +142,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected>, using \$output as <actual> - returns 0 exit code" {
+@test "assert_fail_match <expected>, using \$output as <actual> - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_match "cb"
 
@@ -150,7 +150,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected>, using \$output as <actual> - returns 1 exit code" {
+@test "assert_fail_match <expected>, using \$output as <actual> - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_match "ab"
 
@@ -166,7 +166,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected> <actual> - returns 0 exit code" {
+@test "assert_fail_match <expected> <actual> - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_match "cb" "abc"
 
@@ -174,7 +174,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected> <actual> - returns 1 exit code" {
+@test "assert_fail_match <expected> <actual> - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_match "ab" "abc"
 
@@ -190,7 +190,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected>, using \$output as <actual> - multi-line format - returns 0 exit code" {
+@test "assert_fail_match <expected>, using \$output as <actual> - multi-line format - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
 
   local expected="$(cat <<EXPECTED
@@ -205,7 +205,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected>, using \$output as <actual> - multi-line format - returns 1 exit code" {
+@test "assert_fail_match <expected>, using \$output as <actual> - multi-line format - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
 
   local expected="$(cat <<EXPECTED
@@ -231,7 +231,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected> <actual> - multi-line format - returns 0 exit code" {
+@test "assert_fail_match <expected> <actual> - multi-line format - return 0 exit code" {
   local actual="$(cat <<ACTUAL
 ihg
 fed
@@ -253,7 +253,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected> <actual> - multi-line format - returns 1 exit code" {
+@test "assert_fail_match <expected> <actual> - multi-line format - return 1 exit code" {
   local actual="$(cat <<ACTUAL
 abc
 def
@@ -286,7 +286,7 @@ EXPECTED
 
 }
 
-@test "assert_match <expected>, using regex match and \$output as <actual> - returns 0 exit code" {
+@test "assert_match <expected>, using regex match and \$output as <actual> - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_match "^ab"
 
@@ -299,7 +299,7 @@ EXPECTED
 
 }
 
-@test "assert_match <expected>, using regex match and \$output as <actual> - returns 1 exit code" {
+@test "assert_match <expected>, using regex match and \$output as <actual> - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_match "cb$"
 
@@ -315,7 +315,7 @@ EXPECTED
 
 }
 
-@test "assert_match <expected> <actual>, using regex match - returns 0 exit code" {
+@test "assert_match <expected> <actual>, using regex match - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_match "^ab" "abc"
 
@@ -328,7 +328,7 @@ EXPECTED
 
 }
 
-@test "assert_match <expected> <actual>, using regex match - returns 1 exit code" {
+@test "assert_match <expected> <actual>, using regex match - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_match "cb$" "abc"
 
@@ -344,7 +344,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected>, using regex match and \$output as <actual> - returns 0 exit code" {
+@test "assert_fail_match <expected>, using regex match and \$output as <actual> - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_match "^cb"
 
@@ -352,7 +352,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected>, using regex match and \$output as <actual> - returns 1 exit code" {
+@test "assert_fail_match <expected>, using regex match and \$output as <actual> - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_match "^ab"
 
@@ -368,7 +368,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected> <actual>, using regex match - returns 0 exit code" {
+@test "assert_fail_match <expected> <actual>, using regex match - return 0 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_match "^cb" "abc"
 
@@ -376,7 +376,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_match <expected> <actual>, using regex match - returns 1 exit code" {
+@test "assert_fail_match <expected> <actual>, using regex match - return 1 exit code" {
   run bash -c 'echo "abc"'
   run assert_fail_match "^ab" "abc"
 

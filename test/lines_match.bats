@@ -2,7 +2,7 @@
 
 load ../bats-assertion
 
-@test "assert_lines_match <expected> <line> - returns 0 exit code" {
+@test "assert_lines_match <expected> <line> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_match "ab" 0
 
@@ -25,7 +25,7 @@ load ../bats-assertion
 
 }
 
-@test "assert_lines_match <expected> <line> - returns 1 exit code" {
+@test "assert_lines_match <expected> <line> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_match "cb" 0
 
@@ -84,7 +84,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_match <expected> <reserved word> - returns 0 exit code" {
+@test "assert_lines_match <expected> <reserved word> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_match "ab" "first"
 
@@ -97,7 +97,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_match <expected> <reserved word> - returns 1 exit code" {
+@test "assert_lines_match <expected> <reserved word> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_match "cb" "first"
 
@@ -128,7 +128,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_match <expected> <line> - returns 0 exit code" {
+@test "assert_fail_lines_match <expected> <line> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_match "cb" 0
 
@@ -151,7 +151,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_match <expected> <line> - returns 1 exit code" {
+@test "assert_fail_lines_match <expected> <line> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_match "ab" 0
 
@@ -211,7 +211,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_match <expected> <reserved word> - returns 0 exit code" {
+@test "assert_fail_lines_match <expected> <reserved word> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_match "cb" "first"
 
@@ -224,7 +224,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_match <expected> <reserved word> - returns 1 exit code" {
+@test "assert_fail_lines_match <expected> <reserved word> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_match "ab" "first"
 
@@ -255,7 +255,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_match <expected>, using \$lines as <actual> - returns 0 exit code" {
+@test "assert_lines_match <expected>, using \$lines as <actual> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_match "ab"
 
@@ -273,7 +273,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_match <expected>, using \$lines as <actual> - returns 1 exit code" {
+@test "assert_lines_match <expected>, using \$lines as <actual> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_match "cb"
 
@@ -321,7 +321,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_match <expected>, using \$lines as <actual> - returns 0 exit code" {
+@test "assert_fail_lines_match <expected>, using \$lines as <actual> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_match "cb"
 
@@ -339,7 +339,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_match <expected>, using \$lines as <actual> - returns 1 exit code" {
+@test "assert_fail_lines_match <expected>, using \$lines as <actual> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_match "ab"
 
@@ -387,7 +387,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_match <expected> <line>, using regex match - returns 0 exit code" {
+@test "assert_lines_match <expected> <line>, using regex match - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_match "^ab" 0
 
@@ -410,7 +410,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_match <expected> <line>, using regex match - returns 1 exit code" {
+@test "assert_lines_match <expected> <line>, using regex match - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_match "^cb" 0
 
@@ -469,7 +469,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_match <expected> <line>, using regex match - returns 0 exit code" {
+@test "assert_fail_lines_match <expected> <line>, using regex match - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_match "^cb" 0
 
@@ -492,7 +492,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_match <expected> <line>, using regex match - returns 1 exit code" {
+@test "assert_fail_lines_match <expected> <line>, using regex match - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_match "^ab" 0
 
@@ -551,7 +551,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_match <expected>, using regex match and \$lines as <actual> - returns 0 exit code" {
+@test "assert_lines_match <expected>, using regex match and \$lines as <actual> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_match "^ab"
 
@@ -569,7 +569,7 @@ EXPECTED
 
 }
 
-@test "assert_lines_match <expected>, using regex match and \$lines as <actual> - returns 1 exit code" {
+@test "assert_lines_match <expected>, using regex match and \$lines as <actual> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_lines_match "^cb"
 
@@ -617,7 +617,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_match <expected>, using regex match and \$lines as <actual> - returns 0 exit code" {
+@test "assert_fail_lines_match <expected>, using regex match and \$lines as <actual> - return 0 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_match "^cb"
 
@@ -635,7 +635,7 @@ EXPECTED
 
 }
 
-@test "assert_fail_lines_match <expected>, using regex match and \$lines as <actual> - returns 1 exit code" {
+@test "assert_fail_lines_match <expected>, using regex match and \$lines as <actual> - return 1 exit code" {
   run bash -c 'echo -e "abc\ndef\nghi"'
   run assert_fail_lines_match "^ab"
 
